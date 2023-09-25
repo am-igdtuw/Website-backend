@@ -4,7 +4,7 @@ import cors from "cors";
 import ErrorMiddleware from "./middleware/error.js";
 
 //routes
-
+import formRouter from "./routers/formRoute.js";
 
 const app = express();
 
@@ -18,6 +18,8 @@ app.use(cors({origin:"*"}));
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ limit: "10mb", extended: true }));
 
+
+app.use("/api", formRouter);
 
 
 // Custom Error Middleware
