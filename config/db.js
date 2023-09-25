@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
 
-const Database = ()=>{
-    // connecting to mongodb
-    mongoose.connect(process.env.MONGO).then((data)=>{
+const Database = () => {
+    mongoose.connect(process.env.MONGO, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    }).then(() => {
         console.log(`MongoDB Connected Successfully`);
-    }).catch((error)=>{
-        console.log(error);
+    }).catch((error) => {
+        console.error(`MongoDB Connection Error: ${error}`);
     });
 }
 
