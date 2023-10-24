@@ -12,10 +12,9 @@ const collaborateSchema = new mongoose.Schema({
         required: true,
         validate: [validator.isEmail, "Please enter a valid email address"]
     },
-    altEmail:{
+    contactNumber: {
         type: String,
         required: true,
-        validate: [validator.isEmail, "Please enter a valid email address"]
     },
     organization: {
         type: String,
@@ -24,6 +23,15 @@ const collaborateSchema = new mongoose.Schema({
     message: {
         type: String,
         required: true,
+    },
+    twitter: {
+        type: String, 
+    },
+    linkedin: {
+        type: String, 
+    },
+    instagram: {
+        type: String, 
     },
     timestamp: {
         type: Date,

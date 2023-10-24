@@ -9,9 +9,12 @@ export const createCollaborateForm = async (req,res) => {
       const newCFormData = {
         name: req.body.name,
         email: req.body.email,
-        altEmail: req.body.altEmail,
+        contact: req.body.contactNumber,
         organization: req.body.organization,
         message: req.body.message,
+        twitter: req.body.twitter,
+        linkedin: req.body.linkedin,
+        instagram: req.body.instagram,
       };
   
       const cform = await Collaborate.create(newCFormData);
@@ -40,6 +43,9 @@ export const createSponsorForm = async (req,res) => {
         company: req.body.company,
         contactNumber: req.body.contactNumber,
         message: req.body.message,
+        twitter: req.body.twitter,
+        linkedin: req.body.linkedin,
+        instagram: req.body.instagram,
       };
   
       const sform = await Sponsor.create(newSFormData);

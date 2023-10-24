@@ -30,6 +30,15 @@ const sponsorSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    twitter: {
+        type: String, 
+    },
+    linkedin: {
+        type: String, 
+    },
+    instagram: {
+        type: String, 
+    },
     timestamp: {
         type: Date,
         default: moment.tz('Asia/Kolkata').format(),
