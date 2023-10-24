@@ -9,7 +9,7 @@ export const createCollaborateForm = async (req,res) => {
       const newCFormData = {
         name: req.body.name,
         email: req.body.email,
-        contact: req.body.contactNumber,
+        contactNumber: req.body.contactNumber,
         organization: req.body.organization,
         message: req.body.message,
         twitter: req.body.twitter,
