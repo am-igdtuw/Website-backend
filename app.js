@@ -5,6 +5,7 @@ import ErrorMiddleware from "./middleware/error.js";
 
 //routes
 import formRouter from "./routers/formRoute.js";
+import psRouter from "./routers/ps.js";
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ limit: "10mb", extended: true }));
 
 
 app.use("/api", formRouter);
+app.use("/api/ps", psRouter);
 
 
 // Custom Error Middleware

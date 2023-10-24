@@ -4,6 +4,7 @@ const Database = () => {
     mongoose.connect(process.env.MONGO, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        useFindAndModify: false,
     }).then(() => {
         console.log(`MongoDB Connected Successfully`);
     }).catch((error) => {
